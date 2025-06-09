@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>講義アンケート分析</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>講義アンケート コメント分析</h1>
+
+      <div class="input-area">
+        <p>分析したいCSVファイルを選択してください</p>
+        <input type="file" id="csvFileInput" accept=".csv" />
+        <button id="analyzeButton">分析開始</button>
+      </div>
+
+      <hr />
+
+      <h2>分析結果</h2>
+      <div id="loading" style="display: none">分析中...</div>
+
+      <div id="resultArea" style="display: none">
+        <h3>ポジティブなコメント 😊</h3>
+        <ul id="positiveComments"></ul>
+
+        <h3>ネガティブなコメント 😥</h3>
+        <ul id="negativeComments"></ul>
+
+        <h3>危険度が高いコメント ⚠️</h3>
+        <ul id="dangerComments"></ul>
+
+        <h3>重要度が高いコメント ✨</h3>
+        <ul id="importanceComments"></ul>
+        <h3>コメント統計</h3>
+        <div id="statsChart">
+          <img
+            id="analysisChart"
+            alt="分析結果のグラフ"
+            style="max-width: 100%"
+          />
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

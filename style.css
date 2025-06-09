@@ -1,0 +1,136 @@
+/* style.css */
+
+/* --- 全体のスタイル --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Hiragino Sans", "Noto Sans CJK JP", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7f6;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* --- コンテンツ全体のコンテナ --- */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* --- 見出しのスタイル --- */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+h2,
+h3 {
+  color: #34495e;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 8px;
+  margin-top: 40px;
+}
+
+/* --- 入力フォームとボタンのスタイル --- */
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* 要素間のスペース */
+  align-items: center;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+#csvFileInput {
+  font-size: 1rem;
+  border: 1px solid #bdc3c7;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#analyzeButton {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+#analyzeButton:hover {
+  background-color: #2980b9;
+}
+
+#analyzeButton:active {
+  transform: translateY(1px); /* クリック時に少し沈む効果 */
+}
+
+/* --- 分析中の表示スタイル --- */
+#loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  padding: 40px 0;
+}
+
+/* --- 結果表示エリアのスタイル --- */
+#resultArea h3 {
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none; /* リストの黒丸を消す */
+  padding-left: 0;
+}
+
+/* 各コメントのスタイル */
+li {
+  background-color: #fdfdfd;
+  border: 1px solid #eee;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border-left-width: 5px; /* 左側の色付きボーダー */
+}
+
+/* ポジティブ・ネガティブで色分け */
+#positiveComments li {
+  border-left-color: #2ecc71; /* 緑色 */
+}
+
+#negativeComments li {
+  border-left-color: #e74c3c; /* 赤色 */
+}
+
+/* ↓↓↓ このブロックを新規追加 ↓↓↓ */
+#dangerComments li {
+  border-left-color: #f39c12; /* オレンジ色 */
+  background-color: #fff8e1;
+}
+
+#importanceComments li {
+  border-left-color: #8e44ad; /* 紫色 */
+}
+/* ↑↑↑ 新規追加ブロックここまで ↑↑↑ */
+
+/* --- グラフ画像のスタイル --- */
+#analysisChart {
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+}
