@@ -38,16 +38,15 @@ async def analyze_csv(file: UploadFile = File(...)):
         # グラフの描画領域を準備
         fig, ax = plt.subplots()
 
-        posi_count = len(positive_comments)
-        nega_count = len(negative_comments)
-        other_count = len(all_comments) - posi_count - nega_count
-        
-        # 棒グラフを作成
-        ax.bar(['ポジティブ', 'ネガティブ', 'その他'], 
-               [posi_count, nega_count, other_count], 
-               color=['skyblue', 'salmon', 'lightgray'])
-        ax.set_ylabel('コメント数')
-        ax.set_title('コメントのポジネガ分析結果')
+        x = [1,2,3,4,5]
+        y = [2,4,6,8,10]
+
+        plt.plot(x,y)
+        plt.xlabel("x")
+        plt.ylabel("Y")
+        plt.title("title")
+
+
 
         # 【重要】グラフをファイルに保存する代わりに、メモリ上のバッファに保存する
         # io.BytesIO() は、メモリ上に一時的なバイナリファイルを作成するようなものです。
@@ -63,6 +62,10 @@ async def analyze_csv(file: UploadFile = File(...)):
         # これでJSONに含められる「ただの長い文字列」になります。
         chart_image_base64 = base64.b64encode(buf.getvalue()).decode('utf-8')
         buf.close()
+
+        positive_comments = "ありがとう"
+        negative_comments = "ごめんなさい"
+
 
 
         # --- 4. script.jsが期待する形式でJSONデータを作成 ---
