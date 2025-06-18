@@ -67,7 +67,6 @@ async def analyze_csv(file: UploadFile = File(...)):
         negative_comments = "ごめんなさい"
 
 
-
         # --- 4. script.jsが期待する形式でJSONデータを作成 ---
         # JavaScript側でアクセスしたキー名（'positiveComments'など）と完全に一致させる必要があります。
         results = {
