@@ -5,7 +5,6 @@ from dotenv import load_dotenv
 # .envファイルから環境変数を読み込む
 # このコードを実行するためには、python-dotenvライブラリが必要です
 # pip install python-dotenv
-load_dotenv()
 
 try:
     # 環境変数からAPIキーを読み込む
